@@ -11,11 +11,11 @@ end
 
 
 class Order < ActiveRecord::Base
-  self.table_name = 'salesforce2.order'
+  self.table_name = 'salesforce2."order"'
 end
 
 get "/orders" do
-  @contacts = Order.all
+  @orders = Order.all
   erb :index
 end
 
